@@ -1,0 +1,12 @@
+{
+  "ID":"566DFFD06C7944BBAFCB3712320A0EC2",
+  "ActionKeyword":"ax",
+  "Name":"Dynamics Ax Launcher",
+  "Description":"Launch Dynamics Ax with the given configuration file.",
+  "Author":"davidtrautmann",
+  "Version":"1.0.0",
+  "Language":"csharp",
+  "Website":"https://github.com/davidtrautmann/Wox.Plugin.AxLauncher",
+  "IcoPath": "Images\\app.png",
+  "ExecuteFileName":"Wox.Plugin.AxLauncher.dll"
+}
