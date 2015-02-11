@@ -39,8 +39,13 @@ namespace Wox.Plugin.AxLauncher
             }
             else
             {
-                // search for files *parameter*.axc
-                searchPattern = "*" + query.ActionParameters[0].ToLower() + "*.axc";
+                // search for files *parameters*.axc
+                searchPattern = "*";
+                foreach (string parameter in query.ActionParameters)
+                {
+                    searchPattern += parameter + "*";
+                }
+                searchPattern += ".axc";
             }
 
             if (String.Empty.Equals(settings.axcPath.Trim()))
