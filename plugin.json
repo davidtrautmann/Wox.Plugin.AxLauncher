@@ -7,6 +7,6 @@
   "Version":"1.0.0",
   "Language":"csharp",
   "Website":"https://github.com/davidtrautmann/Wox.Plugin.AxLauncher",
-  "IcoPath": "Images\\app.png",
+  "IcoPath": "Images\\axc6.png",
   "ExecuteFileName":"Wox.Plugin.AxLauncher.dll"
 }
