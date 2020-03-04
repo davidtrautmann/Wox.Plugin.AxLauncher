@@ -35,7 +35,7 @@ namespace Wox.Plugin.AxLauncher
             {
                 // no search parameter
                 // show all .axc files
-                searchPattern = "*.axc";
+                searchPattern = "*.axc?";
             }
             else
             {
@@ -45,7 +45,7 @@ namespace Wox.Plugin.AxLauncher
                 {
                     searchPattern += parameter + "*";
                 }
-                searchPattern += ".axc";
+                searchPattern += ".axc?";
             }
 
             if (String.Empty.Equals(settings.axcPath.Trim()))
@@ -63,7 +63,7 @@ namespace Wox.Plugin.AxLauncher
                 {
                     Title = axcFile.Substring(axcFile.LastIndexOf("\\") + 1),
                     SubTitle = axcFile,
-                    IcoPath = "Images\\app.png",
+                    IcoPath = "Images\\" + GetExtensionWithoutPeriod(axcFile) + ".png",
                     Action = e =>
                     {
                         try
@@ -82,6 +82,11 @@ namespace Wox.Plugin.AxLauncher
                 });
             }
             return results;
+        }
+
+        private string GetExtensionWithoutPeriod(string path)
+        {
+            return Path.GetExtension(path).Substring(1);
         }
 
         /// <summary>
